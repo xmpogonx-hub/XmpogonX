@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#090d16"/>
+    </radialGradient>
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Outer circular background -->
+  <circle cx="256" cy="256" r="236" fill="url(#bg)" stroke="#334155" stroke-width="8"/>
+  <circle cx="256" cy="256" r="196" fill="none" stroke="url(#ringGrad)" stroke-width="4" stroke-opacity="0.35" stroke-dasharray="4 8"/>
+  
+  <!-- Subtle dial hour ticks -->
+  <line x1="256" y1="84" x2="256" y2="112" stroke="#94a3b8" stroke-width="6" stroke-linecap="round"/>
+  <line x1="428" y1="256" x2="400" y2="256" stroke="#94a3b8" stroke-width="6" stroke-linecap="round"/>
+  <line x1="256" y1="428" x2="256" y2="400" stroke="#94a3b8" stroke-width="6" stroke-linecap="round"/>
+  <line x1="84" y1="256" x2="112" y2="256" stroke="#94a3b8" stroke-width="6" stroke-linecap="round"/>
+  
+  <!-- Clock hands pointing at hourly mark (12:00) -->
+  <line x1="256" y1="256" x2="256" y2="140" stroke="#f8fafc" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="256" cy="256" r="14" fill="#38bdf8"/>
+
+  <!-- Subtle chime pulse arcs -->
+  <path d="M 220 115 A 38 38 0 0 1 292 115" fill="none" stroke="#38bdf8" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+  <path d="M 196 90 A 62 62 0 0 1 316 90" fill="none" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- Subtle notification indicator in upper-right quadrant -->
+  <circle cx="366" cy="146" r="32" fill="#0284c7" opacity="0.3" filter="url(#glow)"/>
+  <circle cx="366" cy="146" r="20" fill="#0284c7" opacity="0.6"/>
+  <circle cx="366" cy="146" r="14" fill="#38bdf8"/>
+  <circle cx="366" cy="146" r="6" fill="#ffffff"/>
+</svg>

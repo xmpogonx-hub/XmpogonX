@@ -1,0 +1,10 @@
+{
+  "name": "Hourly Beep - Time Management & Interval Chime",
+  "description": "Smart hourly chime and interval beep for time management, featuring background alerts, battery optimization, custom ringtones, dark mode, time zone sync, and biometric protection.",
+  "requestFramePermissions": [
+    "notifications"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
